@@ -45,8 +45,6 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     //m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
     // chooser.addOption("My Auto", new MyAutoCommand());
-    this.m_period = 200;
-    System.out.println( getPeriod() );
 
     SmartDashboard.putData("Autonomous Command: ", chooser);
   }
@@ -66,9 +64,6 @@ public class Robot extends TimedRobot {
     }else{
       compressor.start();
     }
-
-    operatorStick.toggleButtons();
-    driverStick.toggleButtons();
 
     SmartDashboard.putNumber( "Intake Voltage", indexerSubsystem.getIntakeVelocity() );
   }

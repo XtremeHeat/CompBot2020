@@ -30,21 +30,6 @@ public class OI {
     }
 
   }
-
-  public void toggleButtons(){
-    for( int i = 0; i < 10; i++ ){
-      if( secsWaited[i] > .1 && buttons[i].get() ){
-        toggle[i] = !toggle[i];
-        secsWaited[i] = 0;
-      }
-      else{ System.out.println( secsWaited[i] );secsWaited[i] += RobotMap.robot.getPeriod(); }
-    }
-  }
-
-  public boolean getToggle( int i ){
-    return toggle[i];
-  }
-
   public boolean getA(){
     return buttons[0].get();
   }

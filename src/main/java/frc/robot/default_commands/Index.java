@@ -25,7 +25,6 @@ public class Index extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {  //order 66
-
     Robot.indexerSubsystem.checkBeams();
 
     if( Robot.operatorStick.getA() ){
@@ -56,13 +55,14 @@ public class Index extends Command {
 
     Robot.indexerSubsystem.indexBalls( .5, 1, .6 );
 
-
     if( Robot.operatorStick.getB() ){
       Robot.indexerSubsystem.abort();
     }
+    
 
     Robot.indexerSubsystem.emptyMagazine( Robot.driverStick.getA(),
      Robot.driverStick.getB() );
+
     
   }
 
